@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -mindepth 1  -name "*.j" -type f -delete
+find .  -name "*.j" -type f -delete
