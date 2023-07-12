@@ -1,0 +1,7 @@
+#!/bin/bash
+output=""
+while read -r line; do
+    first_letter=${line:0:1}
+    output="$output$first_letter"
+done
+echo -e "$output\n"
