@@ -1,5 +1,2 @@
 #!/bin/bash
-for var in $(printenv)
-do
-   echo "$var"
-done
+printenv
