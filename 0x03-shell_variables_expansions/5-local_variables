@@ -1,10 +1,2 @@
 #!/bin/bash
-# List all local variables
-echo "LOCAL VARIABLES:"
-echo "$(set | grep '^[[:alpha:]]')"
-# List all environment variables
-echo "ENVIRONMENT VARIABLES:"
-echo "$(printenv)"
-# List all functions
-echo "FUNCTIONS:"
-echo "$(declare -F)"
+declare
