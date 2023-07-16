@@ -1,2 +1,2 @@
 #!/bin/bash
-WATER_BASE_10=$(echo "${WATER}" | tr 'water' '01234'); STIR_BASE_10=$(echo "${STIR}" | tr 'stir.' '0123'); RESULT_OCTAL=$(printf "%o\n" $((5#${WATER_BASE_10} + 5#${STIR_BASE_10}))); echo "${RESULT_OCTAL}" | tr -d '\\\[' | tr '01234567' 'bestchol'
+echo "${WATER}" | tr 'water' '01234' | (read WATER_BASE_10 && echo "${STIR}" | tr 'stir.' '0123' | (read STIR_BASE_10 && printf "%s%s\n" "$((5#${WATER_BASE_10} + 5#${STIR_BASE_10}))" " 1" | cut -f1 -d' ' | tr -d '\\\[' | tr '01234567' 'bestchol'))
