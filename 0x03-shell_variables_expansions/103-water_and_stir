@@ -1,2 +1,2 @@
-#!/bin/bash
-echo "${WATER}" | tr 'water' '01234' | (read WATER_BASE_10 && echo "${STIR}" | tr 'stir.' '0123' | (read STIR_BASE_10 && printf "%s%s\n" "$((5#${WATER_BASE_10} + 5#${STIR_BASE_10}))" " 1" | cut -f1 -d' ' | tr -d '\\\[' | tr '01234567' 'bestchol'))
+#!/bin/bashi
+echo  "%o\n" $((     5#(echo $WATER | tr water 01234) + 5#(echo $STIR | tr stir. 0123)    )) |  tr -d '\\\['  | tr 01234567 bestchol
