@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -n "%o\n" $((     $((5#(echo $WATER | tr water 01234))) + $((5#(echo $STIR | tr stir. 0123)))     )) |  tr -d '\\\['  | tr 01234567 bestchol
+WATER_BASE_10=$(echo "${WATER}" | tr 'water' '01234'); STIR_BASE_10=$(echo "${STIR}" | tr 'stir.' '0123'); RESULT_OCTAL=$(printf "%o\n" $((5#${WATER_BASE_10} + 5#${STIR_BASE_10}))); echo "${RESULT_OCTAL}" | tr -d '\\\[' | tr '01234567' 'bestchol'
